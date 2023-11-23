@@ -1,0 +1,500 @@
+body {
+    background-color: #000000;
+
+    background-size: cover;
+    font-family: 'Foundation-Logo';
+    src: url(FDL.ttf);
+
+}
+
+
+
+@font-face {
+    font-family: 'Foundation-Logo';
+    src: url(FDL.ttf);
+}
+
+h4 {
+    font-family: 'Foundation-Logo';
+    src: url(FDL.ttf);
+    color: #edf3fa;
+}
+
+:root {
+    cursor: url(icons8-cohete-40.png), auto;
+}
+
+nav {
+    color: #A8A8A8;
+
+
+
+}
+
+body {
+    overflow: hidden;
+}
+
+#loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    overflow: hidden;
+    /* Color de fondo */
+}
+
+/* Estilos para la animación */
+#canvas {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+h1 {
+    font-family: 'Foundation-Logo';
+    src: url(FDL.ttf);
+    color: #c7c7c7;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Foundation-Logo';
+    src: url(FDL.ttf);
+    font-size: xx-large;
+    padding-top: 0.5cm;
+    animation: fade-in 9s ease-in-out;
+}
+
+.text-container {
+    position: relative;
+    height: 200px;
+    width: 1000px;
+    color: #c7c7c7;
+    /* Altura de contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.heart-rate {
+    width: 150px;
+    height: 73px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.fade-in {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    animation: heartRateIn 2.5s linear infinite;
+}
+
+.fade-out {
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background-color: #000;
+    top: 0;
+    right: -120%;
+    animation: heartRateOut 2.5s linear infinite;
+    background: rgba(0, 0, 0, 1);
+    background: linear-gradient(to right, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 1)80%, rgba(0, 0, 0, 0)100%);
+}
+
+@keyframes heartRateIn {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 0;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes heartRateOut {
+    0% {
+        left: -120%;
+    }
+
+    30% {
+        left: -120%;
+    }
+
+    100% {
+        left: 0;
+    }
+
+}
+
+.container {
+    font-size: 10px;
+    width: 40em;
+    height: 40em;
+    position: relative;
+    overflow: hidden;
+}
+
+.sun {
+    position: absolute;
+    top: 15em;
+    left: 15em;
+    width: 10em;
+    height: 10em;
+    background-color: rgb(255, 204, 0);
+    border-radius: 50%;
+    box-shadow: 0 0 3em white;
+}
+
+.earth,
+.moon {
+    position: absolute;
+    border-style: solid;
+    border-color: white transparent;
+    border-width: 0.1em 0.1em 0 0;
+    border-radius: 50%;
+}
+
+.earth {
+    top: 5em;
+    left: 5em;
+    width: 30em;
+    height: 30em;
+    animation: rahul 36.5s linear infinite;
+}
+
+.moon {
+    top: 0;
+    right: 0;
+    width: 8em;
+    height: 8em;
+    animation: rahul 5s linear infinite;
+}
+
+.earth::before,
+.moon::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.earth::before {
+    top: 2.8em;
+    right: 2.8em;
+    width: 3em;
+    height: 3em;
+    background-color: rgb(80, 80, 201);
+}
+
+.moon::before {
+    top: 0.8em;
+    right: 0.2em;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: silver;
+}
+
+@keyframes rahul {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    /* Texto inicialmente transparente */
+    transform: translateY(20px);
+    /* Desplazamiento inicial hacia abajo */
+    transition: opacity 1s, transform 1s;
+    /* Transición de opacidad y transformación */
+}
+
+.text-container2 {
+    position: relative;
+    height: 200px;
+    width: 1000px;
+    color: #c7c7c7;
+    /* Altura de contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.fade-in-up2 {
+    opacity: 0;
+    /* Texto inicialmente transparente */
+    transform: translateY(20px);
+    /* Desplazamiento inicial hacia abajo */
+    transition: opacity 1s, transform 1s;
+    /* Transición de opacidad y transformación */
+}
+
+
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+canvas {
+    position: relative;
+    padding-top: -4cm;
+    top: 50%;
+    left: 50%;
+    margin-left: -50vmin;
+    width: 100vmin;
+    height: 100vmin;
+
+    background-size: cover;
+
+
+}
+
+:root {
+    --width: 100px;
+    --padding: 10px;
+    --background-color: #A8A8A8;
+    --hover-color: rgb(184, 11, 8);
+    --width-collapsed: 50px;
+    --border-color: black;
+    font-family: 'Foundation-logo';
+    src: url(FDL.ttf);
+}
+
+.imgjue {
+    width: 200px;
+    height: 200px;
+}
+
+table {
+    margin: auto;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    margin-left: var(--width-collapsed);
+    background-color: black;
+}
+
+.body-expanded {
+    margin-left: var(--width);
+}
+
+#sidemenu {
+    background-color: var(--background-color);
+    color: black;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    animation: fade-in 6s ease-in-out;
+}
+
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+#sidemenu a {
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    font-family: 'Foundation-logo';
+    src: url(FDL.ttf);
+}
+
+#sidemenu #header #title {
+
+    overflow: hidden;
+
+}
+
+#sidemenu #header,
+#sidemenu #header #menu-btn {
+    vertical-align: middle;
+}
+
+#sidemenu #header #menu-btn {
+    display: inline-block;
+}
+
+#sidemenu #header #menu-btn {
+    cursor: pointer;
+    padding: 10px;
+    width: var(--width-collapsed);
+    box-sizing: border-box;
+}
+
+
+#sidemenu #header #menu-btn .btn-hamburguer {
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+}
+
+#sidemenu #menu-itmes {
+    overflow: hidden;
+}
+
+#sidemenu #menu-itmes:hover {
+    background-color: var(--hover-color);
+    transition: all .3s;
+    transform: scale(.95);
+}
+
+.menu-item {
+    height: 25px;
+    width: 25px;
+}
+
+span {
+    font-size: small;
+    font-family: 'Foundation-Logo';
+    src: url(FDL.ttf);
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+    size: cover;
+
+}
+
+#sidemenu #profile #photo img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cajaprin {
+    background-color: #190A18;
+    height: 270px;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.CajaSec {
+    background-color: #000000;
+    height: 350px;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.CajaNot {
+    background-color: #3A3D41;
+    text-align: center;
+    margin: auto;
+    height: 240px;
+    width: 800px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
+    transition: all .3s;
+    transform: scale(.80);
+}
+
+.sikas {
+
+    font-size: larger;
+}
+
+.sikas:hover {
+    text-align: center;
+    text-decoration: overline;
+    background: linear-gradient(#1497be, #1c2aec);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    animation: text 5s linear infinite;
+    font-size: larger;
+}
+
+#imagendes2 {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#carouselExampleFade {
+
+    width: 800px;
+    align-items: center;
+    margin: auto;
+}
+
+audio {
+    margin: auto;
+}
+
+@keyframes text {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Foundation-Logo';
+    src: url(FDL.ttf);
+}
